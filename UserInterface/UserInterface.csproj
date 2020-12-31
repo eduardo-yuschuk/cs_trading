@@ -1,0 +1,293 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0B8494DA-0D4B-4B05-B373-33986EDB7731}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UserInterface</RootNamespace>
+    <AssemblyName>UserInterface</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="BacktestingUserControl.xaml.cs">
+      <DependentUpon>BacktestingUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BruteForceSearchUserControl.xaml.cs">
+      <DependentUpon>BruteForceSearchUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ByYearDataSelection.cs" />
+    <Compile Include="DataByYearSelectionUserControl.xaml.cs">
+      <DependentUpon>DataByYearSelectionUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataHelper.cs" />
+    <Compile Include="DataInspectionUserControl.xaml.cs">
+      <DependentUpon>DataInspectionUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataIngestionUserControl.xaml.cs">
+      <DependentUpon>DataIngestionUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataSelection.cs" />
+    <Compile Include="DataSelectionUserControl.xaml.cs">
+      <DependentUpon>DataSelectionUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DrawingColorsProvider.cs" />
+    <Compile Include="IngestionDataSelection.cs" />
+    <Compile Include="Nodes\Actions\Action.cs" />
+    <Compile Include="Nodes\CurrencyCategoryNode.cs" />
+    <Compile Include="Nodes\CurrencyNode.cs" />
+    <Compile Include="Nodes\Node.cs" />
+    <Compile Include="Nodes\CurrenciesNode.cs" />
+    <Compile Include="ParametersEvolutionUserControl.xaml.cs">
+      <DependentUpon>ParametersEvolutionUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SimpleAdministratorWindow.xaml.cs">
+      <DependentUpon>SimpleAdministratorWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel.cs" />
+    <Page Include="BacktestingUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BruteForceSearchUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DataByYearSelectionUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DataInspectionUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DataIngestionUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DataSelectionUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Data\Assets\AssetsUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Data\DataUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Data\Assets\AssetsUserControl.xaml.cs">
+      <DependentUpon>AssetsUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DataUserControl.xaml.cs">
+      <DependentUpon>DataUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="INode.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="ParametersEvolutionUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SimpleAdministratorWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Data\Sources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BarsReading\BarsReading.csproj">
+      <Project>{B2D14A97-8849-488B-BAF4-F28CE8F72FE1}</Project>
+      <Name>BarsReading</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Charts.Common\Charts.Common.csproj">
+      <Project>{6bf01e09-f87c-4f7b-b078-b284d7b51117}</Project>
+      <Name>Charts.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Charts\Charts.csproj">
+      <Project>{a2f337c5-07d7-4e31-9793-c9a62437acf6}</Project>
+      <Name>Charts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FinancialData.Shared\FinancialData.Shared.csproj">
+      <Project>{8FB9707D-8797-482B-A6DC-FE5D964EC555}</Project>
+      <Name>FinancialData.Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QuotesConversion\QuotesConversion.csproj">
+      <Project>{2B7D0DFD-E2C1-4B07-A07F-979B16DEB820}</Project>
+      <Name>QuotesConversion</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SeriesReading.Shared\SeriesReading.Shared.csproj">
+      <Project>{C63CB24C-8A59-4FF8-A9C3-9CAF337715A2}</Project>
+      <Name>SeriesReading.Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SeriesReading\SeriesReading.csproj">
+      <Project>{37E1CA69-6C8F-4AF1-B528-EB92F985AF3D}</Project>
+      <Name>SeriesReading</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SeriesTransformation.Shared\SeriesTransformation.Shared.csproj">
+      <Project>{96D46726-C8D1-4199-B832-636FC2CE0B23}</Project>
+      <Name>SeriesTransformation.Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SeriesTransformation\SeriesTransformation.csproj">
+      <Project>{47A4CEF9-40B8-4EED-8302-D5610E2EA9E4}</Project>
+      <Name>SeriesTransformation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Simulation.Shared\Simulation.Shared.csproj">
+      <Project>{2656ea8f-d554-404e-9a2c-753ecc754acc}</Project>
+      <Name>Simulation.Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Simulation.Strategies\Simulation.Strategies.csproj">
+      <Project>{486EC3C3-384B-4861-AF87-E2C9A328D6C1}</Project>
+      <Name>Simulation.Strategies</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Simulation\Simulation.csproj">
+      <Project>{AC402059-5FF5-4C5C-9977-58C93619D2F2}</Project>
+      <Name>Simulation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TaLib.Extension\TaLib.Extension.csproj">
+      <Project>{D0D894F7-40EC-4F9B-BEAD-2ADF7E2A9931}</Project>
+      <Name>TaLib.Extension</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TradingConfiguration.Shared\TradingConfiguration.Shared.csproj">
+      <Project>{5F12D93A-7C84-400E-9D2B-84D1D7D2C5C4}</Project>
+      <Name>TradingConfiguration.Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

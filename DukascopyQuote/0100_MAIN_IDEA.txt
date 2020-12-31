@@ -1,0 +1,4 @@
+Copyright 2014 Eduardo Yuschuk (eduardo.yuschuk@gmail.com)
+--------------------------------------------------------------------------------
+
+ACTUALMENTE CONTIENE UNA IMPLEMENTACIÓN DE UN LECTOR DE ARCHIVOS DE TEXTO LLAMADO DukascopyOfflineReader.

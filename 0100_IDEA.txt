@@ -1,0 +1,4 @@
+Copyright 2014 Eduardo Yuschuk (eduardo.yuschuk@gmail.com)
+--------------------------------------------------------------------------------
+
+EN ESTA SECCION SE DETALLAN LOS PROYECTOS RELACIONADOS CON EL TRADING ALGORITMICO.

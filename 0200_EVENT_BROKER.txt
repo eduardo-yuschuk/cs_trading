@@ -1,0 +1,5 @@
+Copyright 2014 Eduardo Yuschuk (eduardo.yuschuk@gmail.com)
+--------------------------------------------------------------------------------
+
+BROKER DE EVENTOS QUE PERMITE UNA ARQUITECTURA BASADA EN EVENTOS ASINCRONICOS
+

@@ -1,0 +1,13 @@
+Copyright 2014 Eduardo Yuschuk (eduardo.yuschuk@gmail.com)
+--------------------------------------------------------------------------------
+
+PERMITE ALMACENAR TODA LA INFORMACION DE UNA SESION DE TRABAJO EN UN REPOSITORIO COMUN Y
+ORDENADO.
+
+PROVEE FORMAS DE RECUPERAR LUEGO LA INFORMACION DEL REPOSITORIO DE FORMA ITERATIVA.
+
+TIENE QUE PODER DECIRSE:
+
+FOREACH(ITEM IN SESSION) {
+	//ETC
+}

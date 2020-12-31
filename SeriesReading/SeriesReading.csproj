@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{37E1CA69-6C8F-4AF1-B528-EB92F985AF3D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SeriesReading</RootNamespace>
+    <AssemblyName>SeriesReading</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Descriptor\Quotes\DayDescriptor.cs" />
+    <Compile Include="Descriptor\IDescriptor.cs" />
+    <Compile Include="Descriptor\Quotes\InstrumentDescriptor.cs" />
+    <Compile Include="Descriptor\Quotes\MonthDescriptor.cs" />
+    <Compile Include="Descriptor\Quotes\ProviderDescriptor.cs" />
+    <Compile Include="Descriptor\Quotes\SeriesDescriptor.cs" />
+    <Compile Include="SeriesInformation.cs" />
+    <Compile Include="SeriesReader.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Descriptor\Quotes\YearDescriptor.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FinancialConfiguration\FinancialConfiguration.csproj">
+      <Project>{167ac5ef-ca3c-4ad5-a9c9-d6137fb9f16c}</Project>
+      <Name>FinancialConfiguration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FinancialSeriesUtils\FinancialSeriesUtils.csproj">
+      <Project>{861C6542-4EC4-4F29-AFF4-30FE811A9502}</Project>
+      <Name>FinancialSeriesUtils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QuotesConversion\QuotesConversion.csproj">
+      <Project>{2B7D0DFD-E2C1-4B07-A07F-979B16DEB820}</Project>
+      <Name>QuotesConversion</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SeriesReading.Shared\SeriesReading.Shared.csproj">
+      <Project>{C63CB24C-8A59-4FF8-A9C3-9CAF337715A2}</Project>
+      <Name>SeriesReading.Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SeriesTransformation.Shared\SeriesTransformation.Shared.csproj">
+      <Project>{96D46726-C8D1-4199-B832-636FC2CE0B23}</Project>
+      <Name>SeriesTransformation.Shared</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,6 @@
+﻿Este proyecto prueba la librería Charts con una serie de precios y una serie de trades de ejemplo.
+Los datos no son generados cuidadosamente, por lo tanto no debe esperarse que exista una coherencia entre precios y trades.
+
+11/04/2019
+
+Combiné precios y trades en una misma prueba y corregí un error con respecto a los tiempos de ambas series.

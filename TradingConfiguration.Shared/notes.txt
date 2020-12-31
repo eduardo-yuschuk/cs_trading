@@ -1,0 +1,3 @@
+﻿
+
+Utilizado hasta el momento sólo por UserInterface.

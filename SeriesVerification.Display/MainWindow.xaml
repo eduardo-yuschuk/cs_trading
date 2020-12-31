@@ -1,0 +1,62 @@
+﻿<Window x:Class="SeriesVerification.Display.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="3*" />
+        </Grid.ColumnDefinitions>
+        <ListBox Name="InstrumentsPanel" Grid.Column="0" DisplayMemberPath="Name"
+                 SelectionChanged="InstrumentsPanel_SelectionChanged" />
+        <ListBox Name="ProvidersPanel" Grid.Column="1" DisplayMemberPath="Name"
+                 SelectionChanged="ProvidersPanel_SelectionChanged" />
+        <ListBox Name="YearsPanel" Grid.Column="2" DisplayMemberPath="Name"
+                 SelectionChanged="YearsPanel_SelectionChanged" />
+        <ListBox Name="MonthsPanel" Grid.Column="3" DisplayMemberPath="Name"
+                 SelectionChanged="MonthsPanel_SelectionChanged" />
+        <ListBox Name="DaysPanel" Grid.Column="4" DisplayMemberPath="Name"
+                 SelectionChanged="DaysPanel_SelectionChanged" />
+        <TabControl Grid.Column="5">
+            <TabItem Header="Values">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="20" />
+                    </Grid.RowDefinitions>
+                    <DataGrid Name="ValuesGrid" AutoGenerateColumns="False" Grid.RowSpan="2">
+                        <DataGrid.Columns>
+                            <DataGridTemplateColumn Header="DateTime" IsReadOnly="True">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding DateTime}" />
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            <DataGridTemplateColumn Header="Ask" IsReadOnly="True">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Ask}" />
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            <DataGridTemplateColumn Header="Bid" IsReadOnly="True">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Bid}" />
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <TextBox Name="StatusText" Grid.Row="1" />
+                </Grid>
+            </TabItem>
+            <TabItem Header="Graph" />
+        </TabControl>
+    </Grid>
+</Window>

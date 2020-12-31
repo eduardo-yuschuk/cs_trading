@@ -1,0 +1,2 @@
+﻿Este proyecto contiene el componente Chart que permite dibujar series de precios y series de trades entre otras cosas.
+Es el componente a evolucionar para analizar visualmente una sesión de trading o backtesting.

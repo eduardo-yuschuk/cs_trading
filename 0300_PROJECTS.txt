@@ -1,0 +1,154 @@
+0000_DOCUMENTS													Documentación general del proyecto.
+	0100_COMPONENTS
+		0000_CONFIGURATION.txt
+		0050_CONTEXT.txt
+		0100_FACTORY.txt
+		0200_EVENT_BROKER.txt
+		0300_SESSION.txt
+		0400_STORAGE.txt
+		0500_DIRECTORY.txt
+	0200_APPLICATIONS
+		0100_ALGORITHMIC_TRADING
+			0100_INDICATORS
+				0100_SMA										Contiene datos de referencia para validar la implementación interna del SMA (deprecated).
+				0200_RSI										Contiene datos de referencia para validar la implementación interna del RSI (deprecated).
+				0100_IDEA.txt
+	0100_MAIN_IDEA.txt
+	0200_TODO.txt
+	0300_PROJECTS.txt											Este archivo :)
+1000_COMPONENTS
+	CONFIGURATION
+		Configuration.Lib.AppConfig								Implementa el interfaz expuesto en Configuration.Shared mediante ConfigurationManager.AppSettings.
+		Configuration.Shared									Expone una interfaz simple de consumo de configuraciones.
+		Configuration.UnitTest									Test unitario muy simple. Lee un atributo configurado.
+	CONTEXT
+		Context.Shared								
+	DIRECTORY
+	EVENT_BROKER
+	FACTORY
+		Factory.Lib
+		Factory.SampleLib
+		Factory.SampleLib.Shared
+		Factory.Shared
+		Factory.UnitTest
+	LOG
+	SESSION
+		Session.Shared
+		Session.UnitTest
+	STORAGE
+		Storage
+		Storage.Files
+		Storage.Shared
+		Storage.UnitTest
+	UTILS
+		StringUtils
+		TimeUtils
+	WEB
+		WebReader
+		WebReader.UnitTest
+2000_APPLICATIONS
+	ALGORITHMIC_TRADING
+		DUKASCOPY
+			DukascopyQuote
+			DukascopyQuote.FinancialDataProvider
+			DukascopyQuote.FinancialDataProvider.UnitTest
+			DukascopyQuote.UnitTest
+		FOREX
+			ACQUISITION
+				SeriesAcquisition								Adquisición de series de Dukacopy (depende de la implementación Java).
+				SeriesAcquisition.Automation
+				SeriesAcquisition.Automation.Program
+				SeriesAcquisition.Automation.UnitTest
+				SeriesAcquisition.Program
+				SeriesAcquisition.Shared
+			BARS
+				BarsBuilder										Construcción de bars a partir de quotes. Genera archivos únicos por activo por timeframe.
+				BarsBuilder.Automation
+				BarsBuilder.Automation.Program					Genera bars a partir de los datos en binarios organizados (C:\quotes).
+				BarsBuilder.Shared
+				BarsBuilder.UnitTest
+				BarsReading										Lectura de bars. Consume archivos únicos por activo por timeframe.
+				BarsReading.Program
+			COMMON
+				FinancialConfiguration
+				FinancialConfiguration.Program
+				FinancialConfiguration.UnitTest
+				FinancialSeries.Shared
+				FinancialSeriesUtils
+			CONVERSION
+				QuotesConversion
+			INDICATORS
+				Indicators.Automation
+				Indicators.Automation.Program
+				IndicatorsReading
+				IndicatorsReading.Program
+			READING
+				SeriesReading
+				SeriesReading.Program
+				SeriesReading.Shared
+				SeriesReading.UnitTest
+			SERIES
+				NumericSeries
+			TRANSFORMATION
+				SeriesTransformation							Transformación de archivo de texto en datos binarios organizados (C:\quotes).
+				SeriesTransformation.Automation					Automatización de la generación de datos binarios organizados.
+				SeriesTransformation.Automation.Program
+				SeriesTransformation.Program					Ejecuta una transformación en base a parámetros recibidos.
+				SeriesTransformation.Shared
+				SeriesTransformation.UnitTest
+			VERIFICATION
+				SeriesVerification
+				SeriesVerification.Automation
+				SeriesVerification.Automation.Program
+				SeriesVerification.Display
+				SeriesVerification.Program
+		RESEARCH
+			FOREX
+				Forex.Research
+			INDICES
+				Indices.Elder.Research
+				Indices.Research
+			MACHINE_LEARNING
+				LANGUAGE
+					PriceSeriesLanguage.Research
+				NeuralNetwork
+				NeuralNetwork.Research
+		FinancialData
+		FinancialData.Manager
+		FinancialData.Manager.IntegrationTest
+		FinancialData.Manager.Shared
+		FinancialData.Manager.UnitTest
+		FinancialData.Shared
+		FinancialIndicator
+		FinancialIndicator.Shared
+		FinancialIndicator.UnitTest
+		Nasdaq.StocksProvider
+		Nasdaq.StocksProvider.UnitTest
+		Nasdaq.StocksScanner
+		Simulation
+		Simulation.BruteForce
+		Simulation.Shared
+		Simulation.UnitTest
+		TaLib.Extension
+		TaLib.Native.PerformanceTest
+		TaLib.PerformanceTest
+		TaLib.UnitTest
+		Yahoo.StocksScanner
+		Yahoo.YQL.StocksProvider
+		YahooStockQuote
+		YahooStockQuote.FinancialDataProvider
+		YahooStockQuote.FinancialDataProvider.UnitTest
+		YahooStockQuote.UnitTest
+ALGORITHMIC_TRADING_UI
+	Chart.Program												Aplicación que permitirá cargar un archivo de disco y mostrarlo en un chart (quotes y trades).
+	Chart.Test													Prueba del componente Charts, con una serie de precios y una serie de trades.
+	Charts														Componente que permite dibujar series de precios y de trades. Resuelve bien el zoom y desplazamiento.
+	Charts.Common												Componentes comunes y compartidos por la implementación de UserInterface WinForms y WPF.
+	UserInterface												Aplicación que expone datos organizados por proveedor, activo y período. Permite dibujarlos.
+	UserInterface.WinForms										Implementación de la vista anterior eb WinForms. Posiblemente una rabieta contra WPF.
+CONFIGURATION
+	TradingConfiguration.Shared									Intento de volver configurable alguna parte, que deberá ser analizado más adelante.
+	TradingConfiguration.UnitTest
+TALIB_RESEARCH
+	TaLib.Research												Proyecto prácticamente vacío.
+	WeekBasedAnalysis											Proyecto prácticamente vacío.

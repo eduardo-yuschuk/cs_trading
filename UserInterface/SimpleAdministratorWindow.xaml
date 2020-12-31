@@ -1,0 +1,29 @@
+﻿<!--
+   Copyright 2014 Eduardo Yuschuk (eduardo.yuschuk@gmail.com)
+-->
+<Window x:Class="UserInterface.SimpleAdministratorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:userInterface="clr-namespace:UserInterface"
+        mc:Ignorable="d"
+        Title="SimpleAdministratorWindow" Height="456" Width="800" WindowState="Maximized">
+    <TabControl>
+        <TabItem Header="Data ingestion">
+            <userInterface:DataIngestionUserControl />
+        </TabItem>
+        <TabItem Header="Data inspection">
+            <userInterface:DataInspectionUserControl />
+        </TabItem>
+        <TabItem Header="Backtesting">
+            <userInterface:BacktestingUserControl />
+        </TabItem>
+        <TabItem Header="Brute force search">
+            <userInterface:BruteForceSearchUserControl />
+        </TabItem>
+        <TabItem Header="Parameters evolution" IsSelected="True">
+            <userInterface:ParametersEvolutionUserControl />
+        </TabItem>
+    </TabControl>
+</Window>
